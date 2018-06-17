@@ -2,8 +2,8 @@ class Todoist < Formula
   desc "Todoist CLI client"
   homepage "https://github.com/sachaos/todoist"
 
-  url "https://github.com/sachaos/todoist/archive/v0.10.0.tar.gz"
-  sha256 "5b3aace8893934b0636b9a237bcdb62ff56fa66cc6bea4b8f6c7a4128d7de905"
+  url "https://github.com/sachaos/todoist/archive/v0.10.1.tar.gz"
+  sha256 "5e851d9df1b84a1be237f7715d1d8e582c8292b2a34448c29f1525400d052f93"
   head "https://github.com/sachaos/todoist.git"
 
   depends_on "dep" => :build
