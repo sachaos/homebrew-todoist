@@ -2,16 +2,13 @@ class Todoist < Formula
   desc "Todoist CLI client"
   homepage "https://github.com/sachaos/todoist"
 
-  url "https://github.com/sachaos/todoist/archive/v0.14.0.tar.gz"
-  sha256 "c58dd771f7b1a2750f8805561aa1e8549a7c395fdeab16cac66c6d5735936e99"
+  url "https://github.com/sachaos/todoist/archive/v0.15.0.tar.gz"
+  sha256 "b7ffa14574bd241ab9e21a28f3d40c17b1a12250e89cfbc8ad708cfbfcdd84b3"
   head "https://github.com/sachaos/todoist.git"
 
   depends_on "go" => :build
 
   def install
-    (buildpath/"src/github.com/sachaos/todoist").install buildpath.children
-    cd "src/github.com/sachaos/todoist" do
-      system "go", "build", "-o", bin/"todoist"
-    end
+    system "go", "build", "-o", bin/"todoist"
   end
 end
