@@ -11,6 +11,7 @@ class Todoist < Formula
   def install
     system "go", "build", "-o", bin/"todoist"
     
-    zsh_completion.install "todoist_functions.sh" => "_todoist"
+    zsh_completion.install "todoist_functions.sh" => "_todoist_peco"
+    zsh_completion.install "todoist_functions_fzf.sh" => "_todoist_fzf"
   end
 end
