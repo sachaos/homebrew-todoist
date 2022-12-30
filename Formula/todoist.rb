@@ -3,7 +3,7 @@ class Todoist < Formula
   homepage "https://github.com/sachaos/todoist"
 
   url "https://github.com/sachaos/todoist/archive/v0.17.0.tar.gz"
-  sha256 "fb38315819aaa345fb808b6ac7e4943cd31b206efda2f655093c2b6af48edf74"
+  sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   head "https://github.com/sachaos/todoist.git"
 
   depends_on "go" => :build
