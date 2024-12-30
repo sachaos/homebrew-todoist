@@ -5,12 +5,12 @@
 class Todoist < Formula
   desc "Todoist CLI client"
   homepage "https://github.com/sachaos/todoist"
-  version "0.21.0"
+  version "0.22.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sachaos/todoist/releases/download/v0.21.0/todoist_Darwin_x86_64.tar.gz"
-      sha256 "c994de442998e473fe7d76acfd37ff0c50f406ef0a2b4d65defa448aa64fd824"
+      url "https://github.com/sachaos/todoist/releases/download/v0.22.0/todoist_Darwin_x86_64.tar.gz"
+      sha256 "23a6192adff1f56e9137efd5e0beac9147711ec17fae64f1867c23011a530020"
 
       def install
         bin.install "todoist"
@@ -19,8 +19,8 @@ class Todoist < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sachaos/todoist/releases/download/v0.21.0/todoist_Darwin_arm64.tar.gz"
-      sha256 "a737153e6e21e5ba7091e57054a50585a3fff15a50cf90d930b54a46c22c7722"
+      url "https://github.com/sachaos/todoist/releases/download/v0.22.0/todoist_Darwin_arm64.tar.gz"
+      sha256 "7f83f6f762a07b864610053edc0b05501747e98708b55e7fda8e6b6257dba463"
 
       def install
         bin.install "todoist"
@@ -33,8 +33,8 @@ class Todoist < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/sachaos/todoist/releases/download/v0.21.0/todoist_Linux_x86_64.tar.gz"
-        sha256 "fe44c8182529151aa1036b1e5bbd1102c0d08afd877f657efb3227d02c9b8b68"
+        url "https://github.com/sachaos/todoist/releases/download/v0.22.0/todoist_Linux_x86_64.tar.gz"
+        sha256 "9980c4aa5c0d6c587b4ad4c40a536b2a39c65feff5afc095642a308205174f93"
 
         def install
           bin.install "todoist"
@@ -45,8 +45,8 @@ class Todoist < Formula
     end
     if Hardware::CPU.arm?
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/sachaos/todoist/releases/download/v0.21.0/todoist_Linux_armv6.tar.gz"
-        sha256 "f4a307bfbb305f95ae15d28658755caf28d0993cd766f4978bba936efb3d0f11"
+        url "https://github.com/sachaos/todoist/releases/download/v0.22.0/todoist_Linux_armv6.tar.gz"
+        sha256 "d89fd803a749d887d9fe94b4c3478c653c618c27691847888c79e106fd9091dc"
 
         def install
           bin.install "todoist"
@@ -57,8 +57,8 @@ class Todoist < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/sachaos/todoist/releases/download/v0.21.0/todoist_Linux_arm64.tar.gz"
-        sha256 "c48132cb0ae59a51d960658e9833c54eaabf206af5fa6dd94eb1c3827a8c29cd"
+        url "https://github.com/sachaos/todoist/releases/download/v0.22.0/todoist_Linux_arm64.tar.gz"
+        sha256 "0d310c1d0a28a91c7d6b138c8d43f9252635972b44ee49ecf9d6d50298e0dcc6"
 
         def install
           bin.install "todoist"
