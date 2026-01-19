@@ -5,12 +5,12 @@
 class Todoist < Formula
   desc "Todoist CLI client"
   homepage "https://github.com/sachaos/todoist"
-  version "0.22.0"
+  version "0.23.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sachaos/todoist/releases/download/v0.22.0/todoist_Darwin_x86_64.tar.gz"
-      sha256 "23a6192adff1f56e9137efd5e0beac9147711ec17fae64f1867c23011a530020"
+      url "https://github.com/sachaos/todoist/releases/download/v0.23.0/todoist_Darwin_x86_64.tar.gz"
+      sha256 "e14d889017c53459ad11756f31d37441e4dde4aabe4d8974181666b4809a4181"
 
       def install
         bin.install "todoist"
@@ -19,8 +19,8 @@ class Todoist < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sachaos/todoist/releases/download/v0.22.0/todoist_Darwin_arm64.tar.gz"
-      sha256 "7f83f6f762a07b864610053edc0b05501747e98708b55e7fda8e6b6257dba463"
+      url "https://github.com/sachaos/todoist/releases/download/v0.23.0/todoist_Darwin_arm64.tar.gz"
+      sha256 "7916bd1d854bb17ffad8fc5723d6ed8f89625ea52079c0b23335cb440258d3b6"
 
       def install
         bin.install "todoist"
@@ -31,40 +31,31 @@ class Todoist < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/sachaos/todoist/releases/download/v0.22.0/todoist_Linux_x86_64.tar.gz"
-        sha256 "9980c4aa5c0d6c587b4ad4c40a536b2a39c65feff5afc095642a308205174f93"
-
-        def install
-          bin.install "todoist"
-          zsh_completion.install "todoist_functions.sh" => "_todoist_peco"
-          zsh_completion.install "todoist_functions_fzf.sh" => "_todoist_fzf"
-        end
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/sachaos/todoist/releases/download/v0.23.0/todoist_Linux_x86_64.tar.gz"
+      sha256 "5a7e316c4106ee25015db514fa6676307755fc7c6871d3d7725acba1130555c2"
+      def install
+        bin.install "todoist"
+        zsh_completion.install "todoist_functions.sh" => "_todoist_peco"
+        zsh_completion.install "todoist_functions_fzf.sh" => "_todoist_fzf"
       end
     end
-    if Hardware::CPU.arm?
-      if !Hardware::CPU.is_64_bit?
-        url "https://github.com/sachaos/todoist/releases/download/v0.22.0/todoist_Linux_armv6.tar.gz"
-        sha256 "d89fd803a749d887d9fe94b4c3478c653c618c27691847888c79e106fd9091dc"
-
-        def install
-          bin.install "todoist"
-          zsh_completion.install "todoist_functions.sh" => "_todoist_peco"
-          zsh_completion.install "todoist_functions_fzf.sh" => "_todoist_fzf"
-        end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/sachaos/todoist/releases/download/v0.23.0/todoist_Linux_armv6.tar.gz"
+      sha256 "715cbeb2bb03d6de6c972ec5125dbd0f85272e86a3044a1710ec401ba55d313e"
+      def install
+        bin.install "todoist"
+        zsh_completion.install "todoist_functions.sh" => "_todoist_peco"
+        zsh_completion.install "todoist_functions_fzf.sh" => "_todoist_fzf"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/sachaos/todoist/releases/download/v0.22.0/todoist_Linux_arm64.tar.gz"
-        sha256 "0d310c1d0a28a91c7d6b138c8d43f9252635972b44ee49ecf9d6d50298e0dcc6"
-
-        def install
-          bin.install "todoist"
-          zsh_completion.install "todoist_functions.sh" => "_todoist_peco"
-          zsh_completion.install "todoist_functions_fzf.sh" => "_todoist_fzf"
-        end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/sachaos/todoist/releases/download/v0.23.0/todoist_Linux_arm64.tar.gz"
+      sha256 "dd1c0dca792fb75a65e2f640c45e1ee305b249e9b9aeda997e83fdd5c5fa9995"
+      def install
+        bin.install "todoist"
+        zsh_completion.install "todoist_functions.sh" => "_todoist_peco"
+        zsh_completion.install "todoist_functions_fzf.sh" => "_todoist_fzf"
       end
     end
   end
